@@ -1,0 +1,27 @@
+$primary-color: #333;
+
+$resume-padding: 1% 10%;
+
+// .resume-base {
+
+// }
+
+.resume-header {
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  padding: $resume-padding;
+}
+
+hr {
+  border: 1px solid grey;
+}
+
+.resume-body {
+  padding: $resume-padding;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+}
