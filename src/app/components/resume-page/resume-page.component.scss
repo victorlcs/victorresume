@@ -1,27 +1,52 @@
 $primary-color: #333;
 
 $resume-padding: 1% 10%;
-
-// .resume-base {
-
-// }
+$body-title-padding : 1% 1%;
 
 .resume-header {
-  background-color: $primary-color;
   color: white;
   text-align: center;
-  padding: $resume-padding;
 }
-
+.resume-abtme {
+  padding-top: 20px;
+}
+.resume-body {
+  margin-top: 10px;
+}
 hr {
   border: 1px solid grey;
 }
 
-.resume-body {
-  padding: $resume-padding;
+.body-title {
+  text-align: center;
 }
-
 .profile-picture {
   width: 200px;
-  height: 200px;
+  height: 250px;
+}
+
+.resume-body {
+  span {
+    margin-left: 15px;
+
+  }
+}
+
+.skills-list span {
+  position: absolute;
+    top:25%;
+    left: 15%;
+}
+
+.header-btn {
+  padding-bottom: 15px;
+  div:hover {
+  background-color: #212529;
+  cursor: pointer;
+  }
+}
+
+li {
+  margin: .5rem 0;
+  position: relative;
 }

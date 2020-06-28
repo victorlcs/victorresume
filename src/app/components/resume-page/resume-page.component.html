@@ -1,14 +1,15 @@
-<div class="resume-base container-fluid">
+<div class="container-fluid" style="background-color: #333333;">
+<div class="resume-base container">
   <!-- Header Section -->
   <div class="resume-header">
     <div class="row">
       <div class="col-md">
-        CV
+        <b>CV</b>
       </div>
     </div>
     <div class="row">
       <div class="col-md">
-        <h1>VICTOR LOH</h1>
+        <h1><b>VICTOR LOH</b></h1>
       </div>
     </div>
     <div class="row no-gutters">
@@ -16,14 +17,14 @@
         <hr>
       </div>
       <div class="col-md-4">
-        <h5>SOFTWARE ENGINEER</h5>
+        <h4><b>SOFTWARE ENGINEER</b></h4>
       </div>
       <div class="col-md-4">
         <hr>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row header-btn">
       <div class="col-md" style="border-right: solid 1px grey;">
         <fa-icon [icon]="faMapMarkerAlt">test</fa-icon>
         <p>Kuala Lumpur, Malaysia</p>
@@ -36,29 +37,147 @@
         <fa-icon [icon]="faMailBulk">test</fa-icon>
         <P>victor.loh95@gmail.com</P>
       </div>
-      <div class="col-md">
+      <div class="col-md" (click)="onClickGit()">
         <fa-icon [icon]="faLink">test</fa-icon>
         <P>https://github.com/victorlcs</P>
       </div>
     </div>
   </div>
-
-  <!-- Body Section -->
-  <div class="resume-body">
+</div>
+</div>
+<!-- Body Section -->
+<div class="resume-body container shadow p-3 mb-5 bg-white rounded">
+  <!-- Resume About Me -->
+  <div class="resume-abtme">
     <div class="row">
       <div class="col-md-3">
         <div class="profile-picture">
-          <img src="./assets/profile-picture/victorlcs.jpg" alt="..." class="img-thumbnail">
+          <img src="./assets/profile-picture/victorlcs.jpg" alt="..." class="img-thumbnail"
+            style=" border-radius: 50%;">
         </div>
       </div>
-      <div class="col-md-9">
-        asasds asdasd asd  asd as das dasdasd asdas dasdas dasd asdasdasd asda sdasd as dasd asdas asd asd asdas das
+      <div class="col-md-9" style="display: flex; align-items: center;">
+        <p>Work as a proprietary software engineer for 2 years. Not much development experience but familiar in AngularJS, Angular 9, JavaScript, HTML5, Bootstrap 4, C#, and MSSQL Server. My personal working attitude and strength is always willing to learn new skills, good attention to details, super-cautious working attitude to prevent mistakes. </p>
       </div>
     </div>
   </div>
 
-  <!-- Footer Section -->
-  <div class="resume-footer">
+    <hr>
+    <div class="row">
+      <!-- Skill -->
+      <div class="col-md-5">
+        <div class="row">
+          <div class="col-md-12 body-title">
+            <h4><b>SKILLS</b></h4>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="skills-list">
+              <li *ngFor="let i of mySkills">
+                <fa-icon [icon]="i.icon" size="3x"></fa-icon>
+                <span>{{i.desc}}</span>
+                <mat-progress-bar mode="determinate" [value]="i.level"></mat-progress-bar>
+              </li>
+            </ul>
+            <!-- <ul>
+              <li><fa-icon [icon]="">test</fa-icon>Proprietary Programming Laguage</li>
+              <li><fa-icon [icon]="">test</fa-icon>HTML5</li>
+              <li><fa-icon [icon]="">test</fa-icon>CSS</li>
+              <li><fa-icon [icon]="">test</fa-icon>AngularJS</li>
+              <li><fa-icon [icon]="">test</fa-icon>Angular 9</li>
+              <li><fa-icon [icon]="">test</fa-icon>MS SQL Server</li>
+              <li><fa-icon [icon]="">test</fa-icon>Microsoft Excel</li>
+              <li><fa-icon [icon]="">test</fa-icon>Microsfot Words</li>
+            </ul> -->
+            <!-- <ul class="list-unstyled">
+              <li class="media">
+                <img src="..." class="mr-3" alt="...">
+                <div class="media-body">
+                  Proprietary Programming Laguage
+                </div>
+              </li>
+              <li class="media my-4">
+                <img src="..." class="mr-3" alt="...">
+                <div class="media-body">
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+              </li>
+              <li class="media">
+                <img src="..." class="mr-3" alt="...">
+                <div class="media-body">
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
 
+      <!-- WORK EXPERIENCE-->
+      <div class="col-md-7">
+        <div class="row">
+          <div class="col-md-12 body-title">
+            <h4><b>WORK EXPERIENCE</b></h4>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <span><b>As Software Engineer</b></span>
+            <br>
+            <span><i>Consolsys SDN BHD</i></span>
+            <br>
+            <span><i>(04/2018 - PRESENT)</i></span>
+            <ul>
+              <li>Early project involved with developing bank’s teller transactions with proprietary system and programming language</li>
+              <li>Provide support and fix for client’s UAT</li>
+              <li>Small part project involved with enhancing and supporting AngularJS web application. Given 1 group training on how to use the AngularJS web application to client</li>
+              <li>Testing for C# Silverlight project, documentation, bug test, and writing test script. Testing work involved checking on SQL server database, hardcoding and debugging with visual studio application</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <hr>
+    <!-- Education -->
+    <div class="row justify-content-md-center">
+      <div class="col-md-4 body-title">
+        <h4><b>EDUCATIONS</b></h4>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <span><b>Bachelor Degree of Information Systems (Honours) in Enterprise Information Systems</b></span>
+        <br>
+        <span><i>Tunku Abdul Rahman University College</i></span>
+        <br>
+        <span><i>(2015 - 2017)</i></span>
+        <ul>
+          <li>ERP & SAP, Object-Oriented Programming, Data Structures & Algorithms, Data Warehouse Technology, Business Intelligence, Enterprise Systems</li>
+          <li>Final Year Project, applying Data Mining concept and Data Visualization on dummy data for predictive analytics and descriptive analytics. Tool used are RapidMiner and Tableau</li>
+          <li>Semesters project, sales and purchase system (Java), Quiz Game (Java), calculator & game (assembly language)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <span><b>Bachelor of Science Major in Enterprise Information Systems</b></span>
+        <br>
+        <span><i>Campbell University</i></span>
+        <br>
+        <span><i>(2015 - 2017)</i></span>
+        <ul>
+          <li>Enrolled as a Dual Award programme</li>
+        </ul>
+      </div>
+    </div>
   </div>
+
+<!-- Footer Section -->
+<div class="resume-footer">
+
 </div>
